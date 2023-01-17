@@ -12,11 +12,11 @@
 - In the top level of the project executable
   'python3 gpt3_script.py'
 
-### create a image
+### Create an image
 
 - 'docker build -t <image_name> .'
 
-### stand up container and see the results in output log
+### Stand up the container and see the result in output log
 
 - 'docker run -d -p 8080:8080 <image:latest>'
 

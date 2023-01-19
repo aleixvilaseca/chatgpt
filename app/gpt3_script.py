@@ -1,7 +1,7 @@
 import openai
 import constants
 import requests
-from flask import Flask, render_template
+from flask import Flask, render_template, send_file
 
 app = Flask(__name__)
 
@@ -28,8 +28,8 @@ def save_text(generated_text):
 @app.route('/',  methods=['GET', 'POST'])
 
 def index():
-    if request.method == 'POST':
-        prompt = request.form['prompt']
+    if requests.method == 'POST':
+        prompt = requests.form['prompt']
         generated_text = generate_text(prompt)
         save_text(generated_text)
         return render_template('index.html', generated_text=generate_text)

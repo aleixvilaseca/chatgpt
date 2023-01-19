@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Texto generado</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+  </head>
+  <body>
+    <h1>Texto generado</h1>
+    <p id="generated-text">{{ generated_text }} </p>
+    <form action="{{url_for('download')}}" method="get"class="download-form">
+        <input type="submit" value="Download Generated Text">
+    </form>
+  </body>
+</html>

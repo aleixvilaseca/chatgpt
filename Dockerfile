@@ -9,6 +9,8 @@ COPY app/requirements.txt .
 RUN pip install --no-cache-dir -r requirements.txt
 
 COPY . .
-COPY app/gpt3_script.py /app/
 
-CMD ["python3", "/app/gpt3_script.py"]
+ENV FLASK_APP "gpt3_script.py"
+ENV FLASK_ENV "development"
+
+CMD ["flask", "run", "--host=127.0.0.1"]
